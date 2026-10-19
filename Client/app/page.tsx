@@ -1,7 +1,14 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white px-6 text-zinc-900">
-      <h1 className="text-4xl font-semibold tracking-tight">Hello, world!</h1>
+    <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-white px-6 text-zinc-900">
+      <Link
+        href="/chat"
+        className="rounded-lg bg-zinc-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+      >
+        Chat
+      </Link>
     </main>
   );
 }

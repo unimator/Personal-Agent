@@ -1,12 +1,118 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 body {
   background: #ffffff;
   color: #18181b;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.chat-markdown > :first-child {
+  margin-top: 0;
+}
+
+.chat-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.chat-markdown p,
+.chat-markdown ul,
+.chat-markdown ol,
+.chat-markdown blockquote {
+  margin: 0.65rem 0;
+}
+
+.chat-markdown ul,
+.chat-markdown ol {
+  padding-left: 1.5rem;
+}
+
+.chat-markdown ul {
+  list-style: disc;
+}
+
+.chat-markdown ol {
+  list-style: decimal;
+}
+
+.chat-markdown li + li {
+  margin-top: 0.25rem;
+}
+
+.chat-markdown h1,
+.chat-markdown h2,
+.chat-markdown h3 {
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.chat-markdown h1 {
+  font-size: 1.25rem;
+}
+
+.chat-markdown h2 {
+  font-size: 1.125rem;
+}
+
+.chat-markdown h3 {
+  font-size: 1rem;
+}
+
+.chat-markdown a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.chat-markdown blockquote {
+  border-left: 3px solid #d4d4d8;
+  padding-left: 0.75rem;
+  color: #52525b;
+}
+
+.chat-markdown :not(pre) > code {
+  border-radius: 0.25rem;
+  background: #e4e4e7;
+  padding: 0.1rem 0.3rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.chat-markdown pre {
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  border-radius: 0.5rem;
+  background: #18181b;
+  padding: 0.75rem 1rem;
+  color: #f4f4f5;
+}
+
+.chat-markdown pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875rem;
+}
+
+.chat-markdown table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+
+.chat-markdown th,
+.chat-markdown td {
+  border: 1px solid #d4d4d8;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.chat-markdown th {
+  background: #e4e4e7;
+  font-weight: 600;
+}
+
+.chat-markdown hr {
+  margin: 1rem 0;
+  border-color: #d4d4d8;
 }

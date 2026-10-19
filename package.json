@@ -1,0 +1,11 @@
+{
+  "name": "personal-agent",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others -n client,server -c blue,green \"npm --prefix Client run dev\" \"cd Server && .venv/bin/python -m uvicorn main:app --reload --port 8000\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
